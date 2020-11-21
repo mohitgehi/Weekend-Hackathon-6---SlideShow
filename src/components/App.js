@@ -1,11 +1,11 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 import Slides from "./Slides";
-import  {slides} from './../data';
 
 
-const App = () => {
+const App = (props) => {
     const [currentSlide, setCurrentSlide] = React.useState(0);
+    const slides=props.slides;
     const nextSlide=()=>{
         let copyCurrentSlide=currentSlide;
         copyCurrentSlide++;

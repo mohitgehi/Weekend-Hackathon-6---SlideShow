@@ -11,4 +11,4 @@ const Slides = (props) => {
 }
 
 
-export default App;
+export default Slides;
