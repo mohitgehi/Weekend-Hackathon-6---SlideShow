@@ -5,7 +5,7 @@ import  {slides} from './../data';
 
 
 const App = () => {
-    const [currentSlide, setCurrentSlide] = React.useState(1);
+    const [currentSlide, setCurrentSlide] = React.useState(0);
     const nextSlide=()=>{
         let copyCurrentSlide=currentSlide;
         copyCurrentSlide++;
@@ -17,14 +17,14 @@ const App = () => {
         setCurrentSlide(copyCurrentSlide);
     }
     const resetSlide=()=>{
-        setCurrentSlide(1);
+        setCurrentSlide(0);
     }
     return (
         <>
-            <Slides currentSlide={slide[currentSlide]}/>
-            <button disabled={currentSlide===slide.length} onClick={nextSlide} data-testid="button-next">Next</button>
-            <button disabled={currentSlide===1} onClick={prevSlide} data-testid="button-prev">Previous</button>
-            <button disabled={currentSlide===1} onClick={resetSlide} data-testid="button-restart">Reset</button>
+            <Slides currentSlide={slides[currentSlide]}/>
+            <button disabled={currentSlide===slides.length-1} onClick={nextSlide} data-testid="button-next">Next</button>
+            <button disabled={currentSlide===0} onClick={prevSlide} data-testid="button-prev">Previous</button>
+            <button disabled={currentSlide===0} onClick={resetSlide} data-testid="button-restart">Reset</button>
         </>
     )
 }
