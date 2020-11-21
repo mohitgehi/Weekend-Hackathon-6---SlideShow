@@ -22,7 +22,7 @@ const App = (props) => {
     return (
         <>
             <Slides currentSlide={slides[currentSlide]}/>
-            <button disabled={currentSlide===slides.length-1} onClick={nextSlide} data-testid="button-restart">Next</button>
+            <button disabled={currentSlide===slides.length-1} onClick={nextSlide} data-testid="button-next">Next</button>
             <button disabled={currentSlide===0} onClick={prevSlide} data-testid="button-prev">Prev</button>
             <button disabled={currentSlide===0} onClick={resetSlide} data-testid="button-restart">Restart</button>
         </>
